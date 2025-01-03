@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- CSS -->
+	<link rel="stylesheet" href="aset/style.css">
+
+	<title>Sistem Pengajuan Cuti</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<div class="brand">
+			<img class="bx" src="img/logo-kota-jambi-removebg-preview.png" alt="logo jambi" class="logo">
+			<span class="text">PT Jambi Sejahtera <br> Sistem Pengajuan Cuti</span>
+		</div>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="index.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="karyawan/karyawan.php">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Data Karyawan</span>
+				</a>
+			</li>
+			<li>
+				<a href="riwayatcuti/riwayat.php">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Riwayat Pengajuan Cuti</span>
+				</a>
+			</li>
+			<li>
+				<a href="datacuti/datacuti.php">
+					<i class='bx bxs-inbox' ></i>
+					<span class="text">Data Pengajuan Cuti</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="../login.php" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<p class="nav">Have a Nice Day!</p>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="profile">
+				<img src="img/profile.jpg">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="left">
+				<h1>Dashboard</h1>
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>15</h3>
+						<p>Karyawan</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">
+						<h3>5</h3>
+						<p>Jenis Cuti</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">
+						<h3>20</h3>
+						<p>Riwayat Pengajuan Cuti</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-inbox' ></i>
+					<span class="text">
+						<h3>5</h3>
+						<p>Data Pengajuan Cuti</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+					<div class="chart">
+						<h3>Employee</h3>
+						<canvas id="doughnut"></canvas>
+					</div>
+				<div class="tabel">
+					<div class="head">
+						<h3>Jenis Cuti</h3>
+					</div>
+					<div>
+						<p>
+							Setiap Karyawan memiliki jatah cuti 20 hari kerja per tahun.
+						</p>
+						<p> 1. Cuti Sakit </p>
+							<p style="text-indent: 12px;">
+								Diberikan sesuai dengan durasi sakit yang dilampirkan dalam surat</p>
+							<p style="text-indent: 12px;">keterangan dokter.</p>
+							<p>2. Cuti Tahunan</p>
+							<p style="text-indent: 12px;">
+								Diberikan kepada karyawan setelah bekerja selama 1 tahun penuh. </p>
+							<p style="text-indent: 12px;">Durasi cuti yaitu 12 hari kerja per tahun.</p> 
+							<p>3. Cuti Melahirkan</p> 
+							<p style="text-indent: 12px;">
+								Diberikan kepada karyawan wanita yaitu selama 3 bulan.
+							</p>
+							<p>4. Cuti Haid</p>
+							<p style="text-indent: 12px;">
+								Diberikan kepada karyawan wanita yaitu selama 3 hari.
+							</p>
+							<p>5. Cuti Liburan </p>
+							<p style="text-indent: 12px;">
+								Diberikan kepada seluruh karyawan setelah bekerja selama 6 bulan.</p>
+							<p style="text-indent: 12px;">Durasi cuti yaitu 5 hari kerja per tahun.</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="aset/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="aset/chart.js"></script>
+</body>
+</html>

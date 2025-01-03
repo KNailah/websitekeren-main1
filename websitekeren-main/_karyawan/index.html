@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- CSS -->
+	<link rel="stylesheet" href="aset/dashboard.css">
+
+	<title>Sistem Pengajuan Cuti</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<div class="brand">
+			<img class="bx" src="img/logo-kota-jambi-removebg-preview.png" alt="logo jambi" class="logo">
+			<span class="text">PT Jambi Sejahtera <br> Sistem Pengajuan Cuti</span>
+		</div>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="index.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="pengajuancuti/pengajuancuti.php">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Pengajuan Cuti</span>
+				</a>
+			</li>
+			<li>
+				<a href="riwayatcuti2/riwayatcuti2.php">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Riwayat Pengajuan Cuti</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="../login.php" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<p class="nav">Have a Nice Day!</p>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="profile">
+				<img src="img/profile.jpg">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="left">
+				<h1>Dashboard</h1>
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-archive-out' ></i>
+					<span class="text">
+						<h3>0</h3>
+						<p>Total Pengajuan Cuti</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-user-check' ></i>
+					<span class="text">
+						<h3>0</h3>
+						<p>Cuti Diterima</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dislike' ></i>
+					<span class="text">
+						<h3>0</h3>
+						<p>Cuti Ditolak</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-hourglass-top' ></i>
+					<span class="text">
+						<h3>0</h3>
+						<p>Cuti Pending</p>
+					</span>
+				</li>
+			</ul>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="aset/script.js"></script>
+</body>
+</html>
