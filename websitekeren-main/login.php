@@ -50,7 +50,7 @@
         $data = $result->fetch_assoc();
 
         if ($data) {
-            $_SESSION[$level] = $data['id'];
+            $_SESSION[$level] = $data['nip'];
             echo "<script>alert('Login Sukses'); window.location.href = '$redirect';</script>";
         } else {
             echo "<div class='alert alert-danger text-center mt-3'>Login Gagal: Periksa Kembali Username dan Password!</div>";

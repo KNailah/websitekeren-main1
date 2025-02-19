@@ -63,9 +63,6 @@
 			<p class="nav">Have a Nice Day!</p>
 			<input type="checkbox" id="switch-mode" hidden>
 			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="profile">
-				<img src="img/profile.jpg">
-			</a>
 		</nav>
 		<!-- NAVBAR -->
 
@@ -88,7 +85,7 @@
 								<th>Mulai Cuti</th>
 								<th>Selesai Cuti</th>
 								<th>Lama Cuti</th>
-								<th>Status</th>
+								<th>Keterangan</th>
 							</tr>
 						</thead>
                         <!-- contoh -->
@@ -108,19 +105,19 @@
 									echo "<td>{$no}</td>";
 									echo "<td>{$row['nip']}</td>";
 									echo "<td>{$row['nama_karyawan']}</td>";
-									echo "<td>{$row['alasan_cuti']}</td>";
 									echo "<td>{$row['jenis_cuti']}</td>";
+									echo "<td>{$row['alasan_cuti']}</td>";
 									echo "<td>{$row['mulai_dari']}</td>";
 									echo "<td>{$row['sampai']}</td>";
 									echo "<td>{$row['lama_cuti']}</td>";
-									echo "<td>{$row['stts']}</td>";
+									echo "<td>{$row['keterangan']}</td>";
 									echo "<td>
 										  </td>";
 									echo "</tr>";
 									$no++;
 								}
 							} else {
-								echo "<tr><td colspan='8'>Tidak ada data pengajuan cuti/td></tr>";
+								echo "<tr><td colspan='8'>Tidak ada data pengajuan cuti</td></tr>";
 							}
 							?>
 						</tbody>

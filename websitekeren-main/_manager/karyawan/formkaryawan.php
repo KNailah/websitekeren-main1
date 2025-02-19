@@ -35,12 +35,6 @@
 				</a>
 			</li>
 			<li>
-				<a href="../riwayatcuti/riwayat.php">
-					<i class='bx bxs-message-dots' ></i>
-					<span class="text">Riwayat Pengajuan Cuti</span>
-				</a>
-			</li>
-			<li>
 				<a href="../datacuti/datacuti.php">
 					<i class='bx bxs-inbox' ></i>
 					<span class="text">Data Pengajuan Cuti</span>
@@ -66,9 +60,6 @@
 			<p class="nav">Have a Nice Day!</p>
 			<input type="checkbox" id="switch-mode" hidden>
 			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="profile">
-				<img src="img/profile.jpg">
-			</a>
 		</nav>
 		<!-- NAVBAR -->
 

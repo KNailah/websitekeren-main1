@@ -7,7 +7,8 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- CSS -->
-	<link rel="stylesheet" href="aset/dashboard.css">
+	<link rel="stylesheet" href="../_karyawan/aset/dashboard.css">
+	<link rel="stylesheet" href="../_karyawan/pengajuancuti/dashboard.css">
 
 	<title>Sistem Pengajuan Cuti</title>
 </head>
@@ -28,13 +29,13 @@
 				</a>
 			</li>
 			<li>
-				<a href="pengajuancuti/pengajuancuti.php">
+				<a href="../_karyawan/pengajuancuti/pengajuancuti.php">
 					<i class='bx bxs-group' ></i>
 					<span class="text">Pengajuan Cuti</span>
 				</a>
 			</li>
 			<li>
-				<a href="riwayatcuti2/riwayatcuti2.php">
+				<a href="../_karyawan/riwayatcuti2/riwayatcuti2.php">
 					<i class='bx bxs-message-dots' ></i>
 					<span class="text">Riwayat Pengajuan Cuti</span>
 				</a>
@@ -61,9 +62,6 @@
 			<p class="nav">Have a Nice Day!</p>
 			<input type="checkbox" id="switch-mode" hidden>
 			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="profile">
-				<img src="img/profile.jpg">
-			</a>
 		</nav>
 		<!-- NAVBAR -->
 
@@ -75,40 +73,59 @@
 
 			<ul class="box-info">
 				<li>
-					<i class='bx bxs-archive-out' ></i>
+					<i class='bx bxs-doughnut-chart' ></i>
 					<span class="text">
-						<h3>0</h3>
-						<p>Total Pengajuan Cuti</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-user-check' ></i>
-					<span class="text">
-						<h3>0</h3>
-						<p>Cuti Diterima</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-dislike' ></i>
-					<span class="text">
-						<h3>0</h3>
-						<p>Cuti Ditolak</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-hourglass-top' ></i>
-					<span class="text">
-						<h3>0</h3>
-						<p>Cuti Pending</p>
+						<h3>5</h3>
+						<p>Jenis Cuti</p>
 					</span>
 				</li>
 			</ul>
+			<div class="aritmatika">
+				<h2>Perhitungan Cuti</h2>
+				<form id="cutiForm">
+					<div class="form-group">
+						<label for="totalCuti">Total Cuti Tahunan: 20</label>
+					</div>
+					<div class="form-group">
+						<label for="cutiTerpakai">Cuti yang Sudah Digunakan:</label>
+						<input type="number" id="cutiTerpakai" placeholder="Masukkan jumlah cuti yang sudah digunakan" required>
+					</div>
+					<div class="form-group">
+						<label for="cutiDiajukan">Cuti yang Diajukan:</label>
+						<input type="number" id="cutiDiajukan" placeholder="Masukkan jumlah cuti yang diajukan" required>
+					</div>
+					<button type="button" onclick="hitungCuti()">Hitung Sisa Cuti</button>
+				</form>
+				<div class="result" id="result"></div>
+			</div>
+
+			<script>
+				function hitungCuti() {
+					const totalCuti = 20;
+					const cutiTerpakai = parseInt(document.getElementById('cutiTerpakai').value);
+					const cutiDiajukan = parseInt(document.getElementById('cutiDiajukan').value);
+		
+					if (isNaN(totalCuti) || isNaN(cutiTerpakai) || isNaN(cutiDiajukan)) {
+						document.getElementById('result').innerText = 'Harap isi semua field dengan angka yang valid.';
+						return;
+					}
+		
+					const sisaCuti = totalCuti - cutiTerpakai - cutiDiajukan;
+		
+					if (sisaCuti < 0) {
+						document.getElementById('result').innerText = `Cuti tidak bisa diajukan karena akan melebihi batas. Jika tetap diajukan maka terkena potongan gaji sebesar 10%. Sisa cuti Anda: ${totalCuti - cutiTerpakai}.`;
+					} else {
+						document.getElementById('result').innerText = `Cuti dapat diajukan. Sisa cuti Anda setelah pengajuan: ${sisaCuti}.`;
+					}
+				}
+			</script>
+			
 		</main>
 		<!-- MAIN -->
 	</section>
 	<!-- CONTENT -->
 	
 
-	<script src="aset/script.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>

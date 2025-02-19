@@ -35,12 +35,6 @@
 					<span class="text">Data Karyawan</span>
 				</a>
 			</li>
-			<li>
-				<a href="../riwayatcuti/riwayat.php">
-					<i class='bx bxs-message-dots' ></i>
-					<span class="text">Riwayat Pengajuan Cuti</span>
-				</a>
-			</li>
 			<li class="active">
 				<a href="../datacuti/datacuti.php">
 					<i class='bx bxs-inbox' ></i>
@@ -69,9 +63,6 @@
 			<p class="nav">Have a Nice Day!</p>
 			<input type="checkbox" id="switch-mode" hidden>
 			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="profile">
-				<img src="img/profile.jpg">
-			</a>
 		</nav>
 		<!-- NAVBAR -->
 
@@ -94,7 +85,6 @@
 								<th>Mulai Cuti</th>
 								<th>Selesai Cuti</th>
 								<th>Lama Cuti</th>
-								<th>Aksi</th>
 							</tr>
 						</thead>
 						<tbody class="font">
@@ -113,20 +103,16 @@
 									echo "<td>{$no}</td>";
 									echo "<td>{$row['nip']}</td>";
 									echo "<td>{$row['nama_karyawan']}</td>";
-									echo "<td>{$row['alasan_cuti']}</td>";
 									echo "<td>{$row['jenis_cuti']}</td>";
+									echo "<td>{$row['alasan_cuti']}</td>";
 									echo "<td>{$row['mulai_dari']}</td>";
 									echo "<td>{$row['sampai']}</td>";
 									echo "<td>{$row['lama_cuti']}</td>";
-									echo "<td>
-											<a href='#' class='btn btn-sm btn-success'>Disetujui<i class='bx bxs-edit-alt'></i></a><br>
-											<a href='#' class='btn btn-sm btn-danger'>Ditolak<i class='bx bxs-trash'></i></a>
-										  </td>";
 									echo "</tr>";
 									$no++;
 								}
 							} else {
-								echo "<tr><td colspan='8'>Tidak ada data pengajuan cuti/td></tr>";
+								echo "<tr><td colspan='8'>Tidak ada data pengajuan cuti</td></tr>";
 							}
 							?>
 									

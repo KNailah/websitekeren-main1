@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 CREATE TABLE `tb_manager` (
   `id_manager` int(5) NOT NULL,
-  `nama_admin` varchar(20) NOT NULL,
+  `nama_admin` varchar(50) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -45,13 +45,13 @@ INSERT INTO `tb_manager` (`id_manager`, `nama_admin`, `username`, `password`) VA
 
 CREATE TABLE `data_karyawan` (
   `nip` int(20) NOT NULL,
-  `nama_karyawan` varchar(20) NOT NULL,
-  `divisi` varchar(100) NOT NULL,
+  `nama_karyawan` varchar(50) NOT NULL,
+  `divisi` varchar(25) NOT NULL,
   `alamat_karyawan` text NOT NULL,
   `telpon_karyawan` varchar(12) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `username` varchar(20) NOT NULL,
-  `password` varchar(100) NOT NULL
+  `password` varchar(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -73,17 +73,17 @@ CREATE TABLE `data_Pengajuancuti` (
   `nip` int(20) NOT NULL,
   `nama_karyawan` varchar(50) NOT NULL,
   `jenis_cuti` varchar(50) NOT NULL,
-  `alasan_cuti` varchar(100) NOT NULL,
+  `alasan_cuti` varchar(50) NOT NULL,
   `mulai_dari` date NOT NULL,
   `sampai` date NOT NULL,
-  `lama_cuti` varchar(100) NOT NULL,
-  `stts` varchar(50) NOT NULL
+  `lama_cuti` varchar(10) NOT NULL,
+  `keterangan` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 --
 
-INSERT INTO `data_pengajuancuti` (`id_cuti`, `nip`, `nama_karyawan`, `alasan_cuti`, `jenis_cuti`, `mulai_dari`, `sampai`, `lama_cuti`, `stts`) VALUES
+INSERT INTO `data_pengajuancuti` (`id_cuti`, `nip`, `nama_karyawan`, `alasan_cuti`, `jenis_cuti`, `mulai_dari`, `sampai`, `lama_cuti`, `keterangan`) VALUES
 (1, 22111080, 'Kholishah Nailah', 'Cuti Liburan', 'ingin berlibur', '2024-12-26', '2025-01-2', '8 hari', 'Ditolak');
 -- --------------------------------------------------------
 
